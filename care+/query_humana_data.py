@@ -5,7 +5,7 @@ import pandas as pd
 HEADERSIZE = 10
 
 data = pd.read_csv("members.csv",sep="|")
-
+app = Flask(__name__)
 @app.route('/query', methods=['POST','GET','PUT'])
 def query():
     return data
